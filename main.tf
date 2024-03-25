@@ -18,7 +18,7 @@ resource "google_cloudfunctions_function" "function" {
   source_archive_object = google_storage_bucket_object.source_code.name
 
   trigger_http = true
-  entry_point  = "helloWorld"
+  entry_point  = "getJsonList"
 }
 
 resource "google_cloudfunctions_function_iam_member" "allow_access" {
