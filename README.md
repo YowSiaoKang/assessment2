@@ -2,6 +2,8 @@
 
 This project demonstrates how to provision a simple Google Cloud Function using Terraform to return a response similar to the JSONPlaceholder API to your default virtual network in your personal Google Cloud account.
 
+![JSON_Returned](docs/JSON_Returned.png "JSON_Returned")
+
 ## Prerequisites
 
 Before getting started, make sure you have the following:
@@ -36,7 +38,9 @@ Before getting started, make sure you have the following:
 The Terraform configuration in main.tf includes the necessary resources to deploy the Cloud Function:
 - `google_storage_bucket`: Creates a Cloud Storage bucket to store the Cloud Function code.
 - `google_storage_bucket_object`: Uploads the Cloud Function code (function.zip compressed from function.js) to the bucket.
+   ![Bucket Creation](docs/Bucket_Creation.png "Bucket Creation")
 - `google_cloudfunctions_function`: Deploys the Cloud Function using the uploaded code from the bucket.
+   ![Function Creation](docs/Function_Creation.png "Function Creation")
 
 ## Cloud Function Code
 The Cloud Function code (function.js) contains the logic to return a response similar to the JSONPlaceholder API. You can modify this code as needed.
